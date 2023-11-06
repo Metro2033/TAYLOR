@@ -1,0 +1,40 @@
+def expert(symptom1,symptom2):
+    diagnosis=None
+    treatment=None
+    
+    if symptom1 == 'fever' and symptom2 == 'cough':
+        diagnosis = 'migraine'
+        treatment = 'ibuprofen'
+        hospitals ='Recommended hospital \n1.wokart hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash    \n2.apollo hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash  '
+        return diagnosis,treatment,hospitals
+    
+    elif symptom1 == 'cough' and symptom2 == 'headache':
+        diagnosis ='flu'
+        treatment = 'peramivir'
+        hospitals ='Recommended hospital \n1.wokart hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash    \n2.apollo hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash  '
+        return diagnosis,treatment,hospitals
+        
+    elif symptom1 =='shortness_breadth' and symptom2 =='chest_pain':
+        diagnosis = 'pneumonia'
+        treatment = 'antibiotics and rest'
+        hospitals ='Recommended hospital \n1.sai hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash    \n2.apollo hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash  '
+        return diagnosis,treatment,hospitals
+        
+    elif symptom1 == 'frequenturination'  and symptom2 == 'fatigue':
+        diagnosis = 'diabetes'
+        treatment = 'insulin'
+        hospitals ='Recommended hospital \n1.wokart hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash    \n2.apollo hospital \t.facility 1)regular check-up 2)Mri 3)ctscan 4)x-ray \n.payment 1)card 2)cheque 3)cash  '
+        return diagnosis,treatment,hospitals
+        
+    else:
+        diagnosis = None
+        treatment = None
+        return diagnosis , treatment
+        
+symptom1 = input("Enter the symptom1:-")
+symptom2 = input("Enter the symptom2:-")
+
+diagnosis,treatment,hospitals = expert(symptom1,symptom2)
+print(diagnosis)
+print(treatment)
+print(hospitals)
